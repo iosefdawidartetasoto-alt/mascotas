@@ -1,0 +1,43 @@
+:root{--color-primary:#205cff;--color-secondary:#2ecc71;--color-accent:#3498db;--color-bg:rgb(241,241,241);--color-white:#fff;--color-text:#333;--color-muted:#555;--color-label:#444;--color-border:#ccc;--color-card-bg:#f0f4ff;--font-base:Arial,Helvetica,sans-serif;--fs-base:1rem;--fs-sm:0.875rem;--fs-md:1.1rem;--fs-lg:1.4rem;--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-full:50%;--shadow-sm:0 2px 10px rgba(0,0,0,0.08);--shadow-md:0 4px 16px rgba(0,0,0,0.1);--shadow-lg:0 8px 24px rgba(0,0,0,0.15);--transition:0.3s ease}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--color-bg);font-family:var(--font-base);font-size:var(--fs-base);color:var(--color-text)}
+img{max-width:100%;height:auto;display:block}
+header{background:var(--color-primary);color:var(--color-white);height:80px;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 40px}
+nav{width:100%}
+nav ul{display:flex;align-items:center;justify-content:space-between;gap:20px;list-style:none}
+nav ul h2{margin:0;color:var(--color-white)}
+a{color:var(--color-primary);text-decoration:none;transition:color var(--transition)}
+a:hover{color:var(--color-secondary);text-decoration:underline}
+.btn,.btn-animado,.btn-submit{display:inline-block;padding:10px 20px;color:var(--color-white);text-decoration:none;border-radius:var(--radius-sm);border:none;cursor:pointer;font-size:var(--fs-base);transition:background-color var(--transition),transform var(--transition)}
+.btn-animado{background-color:var(--color-accent)}
+.btn-animado:hover{background-color:var(--color-secondary);color:var(--color-white);text-decoration:none;transform:scale(1.1)}
+.btn-submit{padding:12px 28px;background-color:var(--color-primary);align-self:flex-start}
+.btn-submit:hover{background-color:var(--color-secondary);transform:scale(1.05)}
+.fx-shake:hover{animation:shake 0.5s infinite}
+section{max-width:800px;margin:40px auto;padding:0 20px;display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"sobre sobre" "proyectos proyectos" "contacto contacto";gap:30px}
+.seccion-sobre{grid-area:sobre}
+.seccion-proyectos{grid-area:proyectos}
+.seccion-contacto{grid-area:contacto}
+section>div{background:var(--color-white);border-radius:var(--radius-md);padding:30px;box-shadow:var(--shadow-sm)}
+section h2{font-size:var(--fs-lg);color:var(--color-primary);margin-bottom:12px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+section p{line-height:1.7;color:var(--color-muted)}
+.lista-proyectos{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.lista-proyectos li{background:var(--color-card-bg);border-radius:var(--radius-sm);padding:16px;border-left:4px solid var(--color-primary);transition:transform .2s ease,box-shadow .2s ease}
+.lista-proyectos li:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(32,92,255,0.15)}
+.lista-proyectos li::before{content:"→ ";color:var(--color-primary);font-weight:bold}
+form{display:flex;flex-direction:column;gap:14px}
+form label{font-weight:bold;color:var(--color-label);margin-bottom:4px;display:block}
+form input{width:100%;padding:10px 14px;border:1px solid var(--color-border);border-radius:var(--radius-sm);font-size:var(--fs-base);transition:border-color var(--transition);outline:none}
+form input:focus{border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(32,92,255,0.15)}
+form button[type="submit"]{padding:12px 28px;background-color:var(--color-primary);color:var(--color-white);border:none;border-radius:var(--radius-sm);font-size:var(--fs-base);cursor:pointer;align-self:flex-start;transition:background-color var(--transition),transform var(--transition)}
+form button[type="submit"]:hover{background-color:var(--color-secondary);transform:scale(1.05)}
+.mascotas-titulo{text-align:center;padding:30px 0 0;color:var(--color-primary)}
+.mascotas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:40px 20px;max-width:1000px;margin:0 auto}
+.mascota-card{background:var(--color-white);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-md);display:flex;flex-direction:column;align-items:center;gap:16px;transition:transform var(--transition),box-shadow var(--transition)}
+.mascota-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.mascota-card h2{font-size:var(--fs-md);color:var(--color-primary);margin:0}
+.mascota-card p{font-size:var(--fs-sm);color:var(--color-muted);text-align:center;line-height:1.6;margin:0}
+.mascota-img-wrapper{width:160px;height:160px;border-radius:var(--radius-full);overflow:hidden;border:4px solid var(--color-primary)}
+.mascota-img-wrapper img{width:100%;height:100%;object-fit:cover}
+@media(max-width:768px){.lista-proyectos{grid-template-columns:repeat(2,1fr)}.mascotas-grid{grid-template-columns:repeat(3,1fr);gap:20px;padding:30px 16px}section{grid-template-columns:1fr;grid-template-areas:"sobre" "proyectos" "contacto"}}
+@media(max-width:480px){header{height:auto;padding:16px 20px}nav ul{flex-direction:column;align-items:flex-start;gap:10px}.lista-proyectos{grid-template-columns:1fr}.mascotas-grid{grid-template-columns:repeat(2,1fr);gap:16px;padding:20px 12px}section{grid-template-columns:1fr;grid-template-areas:"sobre" "proyectos" "contacto";margin:20px auto}}

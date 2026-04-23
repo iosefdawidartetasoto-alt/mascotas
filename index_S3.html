@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="iosef arteta soto">
+    <meta name="description" content="este es un ejemplo de pagina web sobre un sitio para mascotas">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_S3.css"/>
+    <title>inicio</title>
+</head>
+<body>
+<div class="contenedor">
+        <header> 
+            <nav>
+                 <ul>
+                    <h2>Hola soy Iosef Arteta Soto</h2>
+                    <li><a href="mascotas_S3.html" class="btn-animado">Mascotas</a></li>
+                 </ul>
+            </nav>
+        </header>
+    
+    <div class=" clearfix"></div>
+
+        <!-- Mensaje de bienvenida -->
+        <div id="bienvenida" class="bienvenida-banner">
+            <span id="bienvenida-texto">👋 ¡Bienvenido al portafolio de Iosef!</span>
+            <button id="btn-cerrar-bienvenida" class="btn-cerrar" aria-label="Cerrar mensaje">✕</button>
+        </div>
+
+        <section>
+            <div>   
+                <h2>Sobre mi</h2>                   
+                <p id="parrafo-sobre">Soy un partidario de ayudar a los demás, ¿por tanto porque no ayudar al mejor amigo del hombre? Aquí encontrarás mascotas que están buscando un dueño para vivir tranquilos y ser felices.</p>
+                <button id="btn-cambiar-texto" class="btn-animado" style="margin-top:12px;">Leer más</button>
+            </div>
+
+            <div class="seccion-proyectos">
+                <h2>Proyectos</h2>
+                <ul class="lista-proyectos">
+                    <li><a href="https://veganuary.com/es/santuarios-de-latinoamerica-una-red-de-esperanza-para-los-animales-rescatados/" target="_blank">Santuarios de Latinoamérica</a></li>
+                    <li><a href="https://www.volunteerworld.com/es/volunteer-abroad/animales" target="_blank">Voluntariado con animales</a></li>
+                    <li><a href="https://barranquilla.gov.co/salud/programa-de-adopcion-animal" target="_blank">Programa de adopción animal</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Contacto</h2>
+                <form id="miFormulario">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div>
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" placeholder="Tu teléfono" required>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="msg-formulario" class="msg-formulario" aria-live="polite"></p>
+            </div>
+
+            <!-- Panel ocultar/mostrar -->
+            <div>
+                <h2>¿Por qué adoptar?</h2>
+                <button id="btn-toggle" class="btn-animado">Mostrar razones</button>
+                <div id="panel-toggle" class="panel-toggle" hidden>
+                    <ul>
+                        <li>🐾 Salvas una vida</li>
+                        <li>🏠 Les das un hogar</li>
+                        <li>❤️ Ganas un amigo incondicional</li>
+                        <li>🌍 Apoyas la adopción responsable</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
